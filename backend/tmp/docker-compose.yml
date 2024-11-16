@@ -1,0 +1,20 @@
+version: '3.9'
+
+services:
+  app:
+    network_mode: host
+    build: .
+    env_file:
+      - .env
+    depends_on:
+      - redis
+
+  redis:
+    image: "redis:latest"
+    network_mode: host
+    volumes:
+      - redis-data:/data
+
+volumes:
+  redis-data:
+    driver: local

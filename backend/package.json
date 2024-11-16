@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "@moralisweb3/common-evm-utils": "^2.27.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.4",
+    "express": "^4.21.1",
+    "moralis": "^2.27.2",
+    "redis": "^4.7.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.7.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "ts-node src/server.ts"
+  }
+}
