@@ -1,0 +1,95 @@
+.dropdown-container {
+  position: relative;
+  margin-left: 10px;
+}
+
+.dropdown-button {
+  display: flex;
+  align-items: center;
+  background-color: #5B4CD7;
+  color: white;
+  border: none;
+  border-radius: 16px;
+  padding: 12px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  gap: 8px;
+
+  &:hover {
+    background-color: #444;
+  }
+
+  &.wrong-network {
+    background-color: #e53e3e;
+  }
+}
+
+.dropdown-icon {
+  margin-left: 10px;
+  width: 16px;
+  height: 16px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  margin-top: 6px;
+  right: 0;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+
+  button,
+  a {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 12px;
+    background-color: transparent;
+    color: black;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover {
+      background-color: #f1f1f1;
+      border-radius: 16px;
+    }
+  }
+
+  .chain-option.active {
+    background-color: #007bff;
+    color: white;
+    border-radius: 16px;
+  }
+}
+
+.wallet-container {
+  margin-left: 16px;
+}
+
+.connect-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 16px;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}

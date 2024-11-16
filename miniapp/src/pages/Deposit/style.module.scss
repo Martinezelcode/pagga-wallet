@@ -1,0 +1,58 @@
+.deposit-page {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &-qr {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 250px;
+        margin-bottom: 10px;
+        
+        // Add styling for QR code container
+        background: white;
+        border-radius: 12px;
+        padding: 16px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    &-address {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        
+        // Add styles for address display
+        background: var(--card-bg);
+        padding: 16px;
+        border-radius: 8px;
+        word-break: break-all;
+        text-align: center;
+    }
+
+    &-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+
+        &__share {
+            background: transparent;
+            border: 1px solid var(--primary);
+        }
+    }
+}
+
+.token {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--primary);
+}

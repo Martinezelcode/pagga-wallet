@@ -1,0 +1,16 @@
+.send-page {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &__input{
+        &-scan {
+        height: 38px;
+    }
+    }
+    &-scan {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+}

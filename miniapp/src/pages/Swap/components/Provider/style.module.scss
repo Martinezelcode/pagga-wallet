@@ -1,0 +1,28 @@
+.provider {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-height: 138px;
+
+    &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 6px;
+        border-bottom: 1px solid var(--border-secondary);
+    }
+
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-dropdown {
+        background: transparent;
+    }
+
+    &-button {
+        width: 110px;
+    }
+}

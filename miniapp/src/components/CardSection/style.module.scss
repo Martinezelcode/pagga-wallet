@@ -1,0 +1,16 @@
+.cards-section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    &__title {
+        padding-left: 18px;
+    }
+}

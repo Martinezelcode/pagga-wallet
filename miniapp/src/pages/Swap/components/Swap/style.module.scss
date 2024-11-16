@@ -1,0 +1,28 @@
+.swap {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+
+    &-inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    &-button {
+        background: var(--black);
+        border: 1px solid var(--primary);
+    }
+
+    &-from {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-max {
+            color: var(--gray-color);
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+    }
+}

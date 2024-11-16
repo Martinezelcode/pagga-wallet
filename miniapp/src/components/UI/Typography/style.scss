@@ -1,0 +1,74 @@
+@import "../../../assets/scss/typography.scss";
+
+.typography {
+  text-align: left;
+  color: var(--white-color);
+
+  &_font-size {
+    &-48 {
+      @include fs-48;
+    }
+
+    &-42 {
+      @include fs-42;
+    }
+
+    &-40 {
+      @include fs-40;
+    }
+
+    &-34 {
+      @include fs-34;
+    }
+
+    &-30 {
+      @include fs-30;
+    }
+
+    &-24 {
+      @include fs-24;
+    }
+
+    &-20 {
+      @include fs-20;
+    }
+
+    &-18 {
+      @include fs-18;
+    }
+
+    &-16 {
+      @include fs-16;
+    }
+
+    &-14 {
+      @include fs-14;
+    }
+
+    &-10 {
+      @include fs-10;
+    }
+  }
+
+  &_font-weight {
+    &-700 {
+      @include weight-700;
+    }
+
+    &-600 {
+      @include weight-600;
+    }
+
+    &-500 {
+      @include weight-500;
+    }
+
+    &-400 {
+      @include weight-400;
+    }
+
+    &-300 {
+      @include weight-300;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.history {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-height: 200px;
+
+    &-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 40px;
+    }
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        flex: 1;
+    }
+
+    &__title {
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    &__button {
+        min-width: 110px;
+    }
+
+    &__loading,
+    &__empty {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        color: var(--gray-color);
+        font-size: 14px;
+    }
+}

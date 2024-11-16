@@ -1,0 +1,25 @@
+.dropdown {
+
+    &-card {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        left: 15px;
+        width: calc(100% - 30px);
+        z-index: 1200;
+        padding-bottom: 30px;
+    }
+
+    &-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+    }
+
+    &.selected {
+        background-color: rgba(0, 0, 0, 0.05);
+        font-weight: 500;
+    }
+}

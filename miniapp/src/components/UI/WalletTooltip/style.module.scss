@@ -1,0 +1,20 @@
+.wallet-tooltip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--black);
+    border-radius: 12px;
+    padding: 6px 12px;
+    width: fit-content;
+    height: 23px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--gray-color);
+
+    &__circle {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: var(--green-light);
+    }
+}
