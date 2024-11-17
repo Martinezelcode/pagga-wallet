@@ -11,6 +11,7 @@ interface ChainConfig {
   REDIS_URL: string;
   CACHE_EXPIRATION: number;
   DEFAULT_CHAIN_IDS: string[];
+  ONEINCH_API_KEY: string;
   // ... other config properties
 }
 
@@ -33,6 +34,7 @@ export const CONFIG: ChainConfig = {
   PORT: process.env.PORT || 3000,
   MORALIS_API_KEY: process.env.MORALIS_API_KEY || '',
   REDIS_URL: process.env.REDIS_URL || 'redis://localhost:6379',
+  ONEINCH_API_KEY: process.env.ONEINCH_API_KEY || '',
   CACHE_EXPIRATION: 300, // 5 minutes in seconds
   DEFAULT_CHAIN_IDS: ['1', '11155111'], // Ethereum mainnet and Sepolia testnet
 };

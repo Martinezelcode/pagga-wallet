@@ -4,7 +4,8 @@ import { RpcDataProvider } from './rpc';
 
 export enum ProviderType {
   MORALIS = 'moralis',
-  RPC = 'rpc'
+  RPC = 'rpc',
+  ONEINCH = 'oneinch'
   // Add other providers here in the future
 }
 
@@ -15,6 +16,8 @@ export class DataProviderFactory {
         return new MoralisDataProvider();
       case ProviderType.RPC:
           return new RpcDataProvider();
+        case ProviderType.ONEINCH:
+          return new OneInchDataProvider();
       // Add cases for other providers here
       default:
         throw new Error(`Unsupported provider type: ${type}`);
