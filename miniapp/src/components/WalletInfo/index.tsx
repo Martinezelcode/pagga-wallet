@@ -13,6 +13,7 @@ interface WalletInfoProps {
   onWalletSelection: (walletAddress: string) => void;
   onAddNewWallet: () => void;
   onDisconnect: () => void;
+  addWalletLabel?: string;
 }
 
 const WalletInfo: React.FC<WalletInfoProps> = ({
@@ -24,6 +25,7 @@ const WalletInfo: React.FC<WalletInfoProps> = ({
   onWalletSelection,
   onAddNewWallet,
   onDisconnect,
+  addWalletLabel = "Connect Wallet",
 }) => {
   const [isBottomSheetOpen, setIsBottomSheetOpen] = useState(false);
   const bottomSheetRef = useRef<HTMLDivElement>(null);
@@ -64,12 +66,12 @@ const WalletInfo: React.FC<WalletInfoProps> = ({
   };
 
   if (!authenticated && !activeWallet) {
-    // Only show "Add wallet" when there are no wallets
+    // Only show "Connect Wallet" when there are no wallets
     if (localWallets.length === 0) {
       return (
         <div className={styles.centerContainer}>
           <WalletTooltip onClick={onAddNewWallet}>
-            Add wallet
+            {addWalletLabel}
           </WalletTooltip>
         </div>
       );
@@ -133,7 +135,7 @@ const WalletInfo: React.FC<WalletInfoProps> = ({
                 className={styles.addNewWallet}
                 onClick={onAddNewWallet}
               >
-                Add New Wallet
+                Connect New Wallet
               </button>
             </div>
           </div>

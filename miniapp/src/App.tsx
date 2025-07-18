@@ -12,6 +12,7 @@ import BackButton from "@components/BackButton";
 import DepositPage from "@pages/Deposit";
 import SendPage from "@pages/Send";
 import TestEarn from "@pages/TestEarn";
+import P2PPage from './pages/P2P';
 
 
 const App = () => {
@@ -23,38 +24,15 @@ const App = () => {
     <BrowserRouter>
       <MainLayout>
         <Routes>
-          <Route
-            path="/"
-            element={<MainPage />}
-          />
-          <Route
-            path="/deposit"
-            element={<ActionsPage />}
-          />
-          <Route
-            path="/deposit/:token"
-            element={<DepositPage />}
-          />
-          <Route
-            path="/send"
-            element={<ActionsPage />}
-          />
-          <Route
-            path="/send/:token"
-            element={<SendPage />}
-          />
-          <Route
-            path="/swap"
-            element={<SwapPage />}
-          />
-          <Route
-            path="/earn"
-            element={<EarnPage />}
-          />
-          <Route 
-            path="/earn/testEarn" 
-            element={<TestEarn />} 
-          />
+          <Route path="/" element={<MainPage />} />
+          <Route path="/deposit" element={<ActionsPage />} />
+          <Route path="/deposit/:token" element={<DepositPage />} />
+          <Route path="/send" element={<ActionsPage />} />
+          <Route path="/send/:token" element={<SendPage />} />
+          <Route path="/swap" element={<SwapPage />} />
+          <Route path="/earn" element={<EarnPage />} />
+          <Route path="/testearn" element={<TestEarn />} />
+          <Route path="/p2p" element={<P2PPage />} />
         </Routes>
         <BackButton />
       </MainLayout>

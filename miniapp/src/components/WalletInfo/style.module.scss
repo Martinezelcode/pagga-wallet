@@ -1,3 +1,5 @@
+@import '../../assets/scss/variables.scss';
+
 .centerContainer {
   display: flex;
   justify-content: center;
@@ -9,6 +11,11 @@
   position: relative;
   display: flex;
   justify-content: center;
+  background: var(--glass-card-bg);
+  border-radius: 2rem;
+  box-shadow: var(--glass-card-shadow);
+  padding: 2rem;
+  margin: 1.5rem 0;
 }
 
 .overlay {
@@ -26,12 +33,14 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: var(--black);
-  border-top-left-radius: 24px;
-  border-top-right-radius: 24px;
+  background: var(--glass-card-bg);
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
   z-index: 101;
   max-height: 70vh;
   animation: slideUp 0.3s ease-out;
+  box-shadow: var(--glass-card-shadow);
+  padding: 2rem 1.2rem;
 }
 
 @keyframes slideUp {
@@ -44,15 +53,16 @@
 }
 
 .bottomSheetHeader {
-  padding: 16px;
+  padding: 1.2rem;
   text-align: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
+  border-bottom: 1px solid var(--border-color, #eee);
+  background: var(--glass-card-bg);
+  border-radius: 2rem 2rem 0 0;
   h2 {
     margin: 0;
-    color: var(--white);
-    font-size: 18px;
-    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    font-weight: 700;
   }
 }
 

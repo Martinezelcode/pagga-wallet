@@ -4,6 +4,112 @@
     box-sizing: border-box;
     font-family: 'SF Pro Display', sans-serif;
 }
+// Uniswap v4-inspired global styles
+
+
+:root {
+  --uni-purple: #6c3df4;
+  --uni-blue: #2172e5;
+  --uni-pink: #ff007a;
+  --uni-bg-dark: #181a20;
+  --uni-bg-light: #f7f8fa;
+  --uni-bg-glass-dark: rgba(24, 26, 32, 0.85);
+  --uni-bg-glass-light: rgba(255,255,255,0.85);
+  --uni-card-dark: #23263b;
+  --uni-card-light: #fff;
+  --uni-border-dark: #2c2f3a;
+  --uni-border-light: #e5e5e5;
+  --uni-text-dark: #fff;
+  --uni-text-light: #181a20;
+  --uni-text-secondary-dark: #b2b2b2;
+  --uni-text-secondary-light: #6c3df4;
+  --uni-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  --uni-radius: 20px;
+  --uni-gradient: linear-gradient(90deg, #6c3df4 0%, #2172e5 50%, #ff007a 100%);
+  --uni-font: 'SF Pro Rounded', 'SF Pro Display', 'Inter', Arial, sans-serif;
+}
+
+body {
+  background: var(--uni-bg-dark);
+  color: var(--uni-text-dark);
+  font-family: var(--uni-font);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.light-mode {
+  background: var(--uni-bg-light);
+  color: var(--uni-text-light);
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background: var(--uni-bg-light);
+    color: var(--uni-text-light);
+  }
+}
+
+a {
+  color: var(--uni-blue);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: var(--uni-pink);
+}
+
+.glass-card {
+  background: var(--uni-bg-glass);
+  border-radius: var(--uni-radius);
+  box-shadow: var(--uni-shadow);
+  border: 1px solid var(--uni-border);
+  padding: 24px;
+  backdrop-filter: blur(8px);
+}
+
+.uni-gradient {
+  background: var(--uni-gradient);
+  color: #fff;
+  border-radius: var(--uni-radius);
+}
+
+.uni-btn {
+  background: var(--uni-gradient);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(108,61,244,0.12);
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.uni-btn:hover {
+  box-shadow: 0 4px 16px rgba(33,114,229,0.18);
+}
+
+.uni-input {
+  background: var(--uni-card);
+  color: var(--uni-text);
+  border: 1px solid var(--uni-border);
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+.uni-input:focus {
+  border-color: var(--uni-blue);
+}
+
+.uni-label {
+  color: var(--uni-text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
 
 body {
     color: var(--white);

@@ -1,60 +1,61 @@
+@import '../../assets/scss/variables.scss';
+
 .wallet-menu {
-    // height: 200px;
-    padding: unset;
-    padding-bottom: 20px;
+  background: var(--glass-card-bg);
+  border-radius: 2rem;
+  box-shadow: var(--glass-card-shadow);
+  border: 1px solid var(--border-color, #eee);
+  padding: 2.5rem 2rem;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(12px);
+  font-family: 'SF Pro Rounded', 'SF Pro', 'Inter', sans-serif;
 
-    &-balance {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100px;
-        gap: 3px;
-        background: var(--primary);
-        border-radius: 36px;
-        margin-bottom: 16px;
-
-        &__title {
-            color: var(--gray-secondary);
-            font-size: 17px;
-        }
-
-        &__value {
-            color: var(--white-color);
-            font-size: 30px;
-            font-weight: 700;
-        }
-    }
-
-    &-buttons {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0 20px;
-        margin-bottom: 20px;
-        gap: 15px;
-    }
-
-    &-control {
-        display: flex;
-        flex-direction: column;
-        // align-items: center;
-        justify-content: space-between;
-        padding: 0 20px;
-        // gap: 15px;
-
-        &-amount {
-            width: 200px;
-        }
-    }
-
-    &-actions {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        gap: 15px;
-    }
+.wallet-menu-balance {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  gap: 10px;
+  background: linear-gradient(90deg, #5a5df1 0%, #7f53ff 100%);
+  border-radius: 2rem;
+  margin: 2rem 2rem 1.2rem 2rem;
+  box-shadow: 0 2px 16px rgba(90,93,241,0.10);
+}
+.wallet-menu-balance__title {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+}
+.wallet-menu-balance__value {
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.wallet-menu-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+  gap: 1.2rem;
+}
+.wallet-menu-control {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+.wallet-menu-control-amount {
+  width: 220px;
+}
+.wallet-menu-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+}
 
     &-error {
         display: flex;
@@ -71,19 +72,37 @@
     &-pagga {
         display: flex;
         flex-direction: column;
-        padding: 0 20px;
-        margin-top: 20px;
+        padding: 0 24px;
+        margin-top: 24px;
     
         &__balance {
           display: flex;
           align-items: center;
-          gap: 10px;
-          margin-bottom: 10px;
+          gap: 12px;
+          margin-bottom: 12px;
         }
     
         &__actions {
           display: flex;
-          gap: 10px;
+          gap: 12px;
         }
       }
+
+
+}
+
+@media (max-width: 767px) {
+  .wallet-menu {
+    margin: 0;
+    border-radius: 0;
+  }
+  .wallet-menu-balance {
+    margin: 12px 8px 8px 8px;
+  }
+  .wallet-menu-pagga {
+    padding: 0 8px;
+  }
+  .wallet-menu-buttons {
+    padding: 0 8px;
+  }
 }

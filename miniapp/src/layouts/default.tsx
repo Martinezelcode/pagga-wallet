@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import FooterNav from '@components/FooterNav';
+import SidebarNav from '@components/SidebarNav';
+import Header from '@components/Header';
 import styles from './style.module.scss';
 import cx from 'classnames';
 import { usePrivy } from '@privy-io/react-auth';
@@ -14,6 +17,16 @@ interface IProps {
   className?: string;
 }
 
+
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  return isMobile;
+}
 
 const MainLayout: React.FC<IProps> = ({ children, className }) => {
   const { logout, authenticated } = usePrivy();
@@ -76,36 +89,26 @@ const MainLayout: React.FC<IProps> = ({ children, className }) => {
   };
 
 
+  const isMobile = useIsMobile();
+  const [isLight, setIsLight] = useState(false);
+  useEffect(() => {
+    document.body.setAttribute('data-theme', isLight ? 'light' : 'dark');
+  }, [isLight]);
+
   return (
     <div className={cx(styles['main-layout'], className)}>
-      <div className={styles['main-layout__header']}>
-        <div className={styles['main-layout__wallet']}>
-          {(authenticated || activeWallet) && (
-            <NetworkSelector
-              chain={chain}
-              chains={chains}
-              isWrongNetwork={isWrongNetwork}
-              onSwitchNetwork={handleSwitchNetwork}
-              switchStatus={status}
-            />
-          )}
-
-          <WalletInfo
-            authenticated={authenticated}
-            activeWallet={activeWallet}
-            balance={balance}
-            address={address}
-            localWallets={localWallets}
-            onWalletSelection={handleWalletSelection}
-            onAddNewWallet={() => setShowWalletModal(true)}
-            onDisconnect={handleLogout}
-          />
-        </div>
-      </div>
+      {!isMobile && <SidebarNav />}
+      <Header
+        onToggleTheme={() => setIsLight(l => !l)}
+        isLight={isLight}
+        onConnectWallet={() => setShowWalletModal(true)}
+      />
 
       <div className={styles['main-layout__content']}>
         {children}
       </div>
+
+      {isMobile && <FooterNav />}
 
       {showWalletModal && (
         <WalletCreationModal

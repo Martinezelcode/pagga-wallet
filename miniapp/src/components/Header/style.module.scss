@@ -1,0 +1,96 @@
+.actionsSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.walletButton {
+  background: linear-gradient(90deg, #5a5df1 0%, #7f53ff 100%);
+  color: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.7rem 1.4rem;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(90,93,241,0.12);
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.walletButton:hover {
+  background: linear-gradient(90deg, #7f53ff 0%, #5a5df1 100%);
+  box-shadow: 0 4px 16px rgba(90,93,241,0.18);
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 2rem;
+  background: var(--glass-card-bg);
+  border-radius: 1.5rem;
+  box-shadow: var(--glass-card-shadow);
+  font-family: 'SF Pro Rounded', 'SF Pro', 'Inter', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logoSection {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 2.2rem;
+  height: 2.2rem;
+  margin-right: 0.8rem;
+}
+
+.brand {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+}
+
+.searchSection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin: 0 2rem;
+}
+
+.searchBar {
+  width: 100%;
+  max-width: 320px;
+  padding: 0.7rem 1.2rem;
+  border-radius: 1rem;
+  border: none;
+  background: var(--input-bg);
+  color: var(--text-primary);
+  font-size: 1rem;
+  box-shadow: var(--input-shadow);
+  outline: none;
+}
+
+.themeToggle {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: var(--text-primary);
+  transition: color 0.2s;
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+    border-radius: 0;
+  }
+  .searchSection {
+    margin: 1rem 0;
+  }
+}

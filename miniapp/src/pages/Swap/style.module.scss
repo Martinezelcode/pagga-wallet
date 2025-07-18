@@ -1,3 +1,90 @@
+.swapTabs {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+.tab {
+  background: var(--glass-card-bg);
+  color: var(--text-secondary);
+  border: none;
+  border-radius: 1rem 1rem 0 0;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.activeTab {
+  background: linear-gradient(90deg, #5a5df1 0%, #7f53ff 100%);
+  color: #fff;
+  font-weight: 700;
+}
+
+.p2pSection {
+  background: var(--glass-card-bg);
+  border-radius: 1.5rem;
+  box-shadow: var(--glass-card-shadow);
+  padding: 2rem;
+  margin-top: 1rem;
+}
+.p2pTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.p2pContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.p2pFilters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.p2pSelect, .p2pInput {
+  padding: 0.5rem 1rem;
+  border-radius: 0.7rem;
+  border: 1px solid var(--border-color, #eee);
+  font-size: 1rem;
+  background: var(--input-bg);
+  color: var(--text-primary);
+}
+.p2pSearch {
+  background: linear-gradient(90deg, #5a5df1 0%, #7f53ff 100%);
+  color: #fff;
+  border: none;
+  border-radius: 0.7rem;
+  padding: 0.5rem 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.p2pTableWrapper {
+  overflow-x: auto;
+}
+.p2pTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: transparent;
+}
+.p2pTable th, .p2pTable td {
+  padding: 0.7rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color, #eee);
+}
+.p2pTable th {
+  background: var(--glass-card-bg);
+  font-weight: 600;
+}
+.p2pBuy {
+  background: linear-gradient(90deg, #5a5df1 0%, #7f53ff 100%);
+  color: #fff;
+  border: none;
+  border-radius: 0.7rem;
+  padding: 0.4rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
 .swap-page {
     display: flex;
     flex-direction: column;

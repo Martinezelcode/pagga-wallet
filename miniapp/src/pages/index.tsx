@@ -1,17 +1,12 @@
-import React from 'react'
-import styles from './style.module.scss'
-import BalanceCard from '../components/TokenBalance'
-import WalletMenu from '@components/WalletMenu'
-import HistoryPanel from '@components/HistoryPanel'
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const MainPage: React.FC = () => {
-  return (
-    <div className={styles['main-page']}>
-        <WalletMenu />
-        <BalanceCard />
-        <HistoryPanel />
-    </div>
-  )
-}
+const RedirectToSwap: React.FC = () => {
+  const navigate = useNavigate();
+  useEffect(() => {
+    navigate('/swap', { replace: true });
+  }, [navigate]);
+  return null;
+};
 
-export default MainPage
+export default RedirectToSwap;

@@ -1,3 +1,5 @@
+@import '../../assets/scss/variables.scss';
+
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -13,14 +15,15 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: var(--black);
-  border-top-left-radius: 24px;
-  border-top-right-radius: 24px;
-  padding: 24px;
+  background: var(--glass-card-bg);
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  padding: 2.5rem 2rem;
   z-index: 1001;
   animation: slideUp 0.3s ease-out;
   max-height: 90vh;
   overflow-y: auto;
+  box-shadow: var(--glass-card-shadow);
 }
 
 @keyframes slideUp {
@@ -34,21 +37,21 @@
 
 .modal-content {
   position: relative;
-  
   h2 {
     text-align: center;
-    color: white;
-    font-size: 24px;
-    margin: 0 0 24px;
+    color: var(--text-primary);
+    font-size: 1.6rem;
+    margin: 0 0 2rem;
+    font-weight: 700;
   }
 }
 
 .drag-handle {
   width: 32px;
   height: 4px;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(90,93,241,0.18);
   border-radius: 2px;
-  margin: 0 auto 24px;
+  margin: 0 auto 2rem;
 }
 
 .close-button {
@@ -57,7 +60,7 @@
   top: 0;
   background: none;
   border: none;
-  color: white;
+  color: var(--text-secondary);
   font-size: 24px;
   cursor: pointer;
   
